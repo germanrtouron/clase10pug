@@ -1,45 +1,42 @@
-h2(class="titleFormProduct")Ingrese producto:
-<section class="container-sm form-container">
-  <form class="formProducts" method="POST" action="/api/productos">
-    <div class="row mb-3">
-      <label
-        class="labelProduct col-sm-2 col-form-label col-form-label-lg"
-      >Name:</label>
-      <div class="row-sm-10">
-        <input
-          type="text"
-          name="title"
-          class="form-control"
-          placeholder="Add product name"
-        />
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label
-        class="labelProduct col-sm-2 col-form-label col-form-label-lg"
-      >Price:</label>
-      <div class="row-sm-10">
-        <input
-          type="text"
-          name="price"
-          class="form-control"
-          placeholder="Add product price"
-        />
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label
-        class="labelProduct col-sm-2 col-form-label col-form-label-lg"
-      >Thumbnail:</label>
-      <div class="row-sm-10">
-        <input
-          type="text"
-          name="thumbnail"
-          class="form-control"
-          placeholder="Add product thumbnail"
-        />
-      </div>
-    </div>
-    <button class="btn btn-dark">Send</button>
-  </form>
-</section>
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous")
+    link(rel="stylesheet" href="styles.css")
+    title="Document"
+  body
+    nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+      div(class="container-fluid")
+        ul(class="navbar-nav")
+          li(class="nav-item")
+            a(class="nav-link" href="http://localhost:8080/") Formulario
+          li(class="nav-item")
+            a(class="nav-link" href="http://localhost:8080/productos") Productos
+      span(class="navbar-text") Web server no rest
+    h2(class="titleFormProduct") Ingrese producto:
+    section(class="container-sm form-container")
+      form(class="formProducts" method="POST" action="/api/productos")
+        div(class="row mb-3")
+          label(class="labelProduct col-sm-2 col-form-label col-form-label-lg") Name:
+        div(class="row-sm-10")
+          input(type="text" name="title" class="form-control" placeholder="Add product name")
+        div(class="row mb-3")
+          label(class="labelProduct col-sm-2 col-form-label col-form-label-lg") Price:
+        div(class="row-sm-10")
+          input(type="text" name="price" class="form-control" placeholder="Add product price")
+        div(class="row mb-3")
+          label(class="labelProduct col-sm-2 col-form-label col-form-label-lg") Thumbnail:
+        div(class="row-sm-10")
+          input(type="text" name="thumbnail" class="form-control" placeholder="Add product thumbnail")
+        button(class="btn btn-dark") Send
+script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous")
+script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous")
+
+
+

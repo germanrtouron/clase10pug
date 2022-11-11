@@ -1,26 +1,40 @@
-<h3 class="titleProducts">
-  Listado de productos
-  <small class="text-muted">En formato tabla</small>
-</h3>
-<table class="table table-hover table-dark table-striped">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <td>Title</td>
-      <td>Price</td>
-      <td>Thumbnail</td>
-    </tr>
-  </thead>
-  {{#each products}}
-    <tr>
-      <th>{{this.id}}</th>
-      <td>{{this.title}}</td>
-      <td>{{this.price}}</td>
-      <td><img
-          class="imgProduct"
-          src={{this.thumbnail}}
-          alt={{this.name}}
-        /></td>
-    </tr>
-  {{/each}}
-</table>
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous")
+    link(rel="stylesheet" href="styles.css")
+    title="Document"
+  body
+    nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+      div(class="container-fluid")
+        ul(class="navbar-nav")
+          li(class="nav-item")
+            a(class="nav-link" href="http://localhost:8080/") Formulario
+          li(class="nav-item")
+            a(class="nav-link" href="http://localhost:8080/productos") Productos
+      span(class="navbar-text") Web server no rest
+
+    h3(class="titleProducts") Listado de productos
+      small(class="text-muted") En formato tabla
+    table(class="table table-hover table-dark table-striped")
+      thead
+        tr
+          th Id
+          td Title
+          td Price
+          td Thumbnail
+      each val in products
+        tr
+          th=val.id
+          td=val.title
+          td=val.price
+          td
+            img(class="imgProduct" src=val.thumbnail alt=val.name)
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous")

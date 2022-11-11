@@ -35,7 +35,7 @@ let products = new Container();
 // VIEWS routes.
 // form view.
 app.get("/", (req, res) => {
-  res.render("layouts/index");
+  res.render("formProducts");
 });
 
 //products view.
